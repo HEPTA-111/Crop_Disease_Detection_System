@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detective Florapatho</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <h1>🌿 Detective Florapatho</h1>
+      <p class="tagline">AI‑Powered Plant Disease Diagnosis</p>
+    </div>
+    <nav class="main-nav">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/history" class="nav-link">History</a>
+      <a href="#" class="nav-link">FAQ</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <p>Upload or capture a clear photo of your crop. Our AI will identify the plant and diagnose any disease in seconds.</p>
+      <ul class="steps">
+        <li>Choose/Capture</li>
+        <li>Analyze</li>
+        <li>Treat</li>
+      </ul>
+    </section>
+
+    <!-- Upload & Camera -->
+    <section class="card upload-card">
+      <h2>Image Input</h2>
+      <form id="upload-form" method="POST" enctype="multipart/form-data" action="/analyze">
+        <!-- Themed File Picker -->
+        <input type="file" id="image-input" name="image" accept="image/*" required hidden>
+        <label for="image-input" class="file-btn">📁 Choose Image</label>
+
+        <button type="submit" class="btn" id="analyze-btn">
+          <span class="btn-text">Analyze</span>
+          <span class="loader" id="loader" hidden></span>
+        </button>
+      </form>
+
+      <div class="or"><span>OR</span></div>
+
+      <div id="camera-section" class="camera">
+        <video id="video" playsinline autoplay></video>
+        <button id="snap-btn" class="btn small">Capture</button>
+        <canvas id="canvas" hidden></canvas>
+      </div>
+
+      <div id="message" class="message"></div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="card quick-links">
+      <h3>Quick Links</h3>
+      <div class="links-grid">
+        <a href="/history" class="link-btn">History</a>
+        <a href="#" class="link-btn">FAQ</a>
+        <a href="#" class="link-btn">How It Works</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

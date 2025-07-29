@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results – Detective Florapatho</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Diagnosis Results</h1>
+
+    <!-- Detected Crop & Disease -->
+    <section class="card">
+      <h2>Crop: {{ crop_name }}</h2>
+      <h3>Disease: {{ disease_name }}</h3>
+      <img src="{{ url_for('static', filename='images/{{ disease_image }}') }}" alt="{{ disease_name }}">
+    </section>
+
+    <!-- Disease Info -->
+    <section class="card">
+      <h2>About the Disease</h2>
+      <p>{{ disease_description }}</p>
+      <ul>
+        <li><strong>Causes:</strong> {{ causes }}</li>
+        <li><strong>Prevention:</strong> {{ prevention }}</li>
+      </ul>
+    </section>
+
+    <!-- Treatment Options -->
+    <section class="card">
+      <h2>Treatment Options</h2>
+      <ol>
+        {% for option in treatment_options %}
+          <li>{{ option }}</li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="card">
+      <h2>Was this diagnosis correct?</h2>
+      <form id="feedback-form" method="POST" action="/feedback">
+        <input type="hidden" name="session_id" value="{{ session_id }}">
+        <button name="feedback" value="correct" class="btn">Yes</button>
+        <button name="feedback" value="incorrect" class="btn outline">No</button>
+      </form>
+    </section>
+
+    <a href="/" class="link">← Analyze another image</a>
+    <a href="/history" class="link right">View History →</a>
+  </main>
+</body>
+</html>

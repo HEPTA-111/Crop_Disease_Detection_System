@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History – Detective Florapatho</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Your Diagnosis History</h1>
+
+    {% if records %}
+      <ul class="history-list">
+        {% for rec in records %}
+          <li class="history-item">
+            <time>{{ rec.timestamp }}</time> –
+            <strong>{{ rec.crop }}</strong>:
+            {{ rec.disease }} →
+            <em>{{ rec.feedback }}</em>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No history yet. Try analyzing a plant!</p>
+    {% endif %}
+
+    <a href="/" class="link">← Back to Home</a>
+  </main>
+</body>
+</html>
