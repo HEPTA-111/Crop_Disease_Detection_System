@@ -180,3 +180,333 @@ body {
   margin-top: 0.75rem;
   text-align: center;
 }
+/* Results Page Specific */
+.hero {
+  background: var(--light);
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+}
+.hero h2 {
+  margin-bottom: 0.5rem;
+  color: var(--green);
+}
+
+/* Result image */
+.result-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Two‑column grid for crop/disease */
+.result-grid {
+  display: flex;
+  gap: 1rem;
+}
+.result-grid > div {
+  flex: 1;
+}
+.confidence {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* Feedback form alignment */
+.feedback-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* Quick-links on results */
+.quick-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+
+/* Flash messages */
+.flash-container {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.flash {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+.flash-error {
+  background: #f8d7da;
+  color: #721c24;
+}
+.flash-message {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Results-specific styles */
+.hero h2 {
+  margin-bottom: 0.5rem;
+  color: var(--green);
+}
+.result-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+.result-grid {
+  display: flex;
+  gap: 1rem;
+}
+.result-grid > div {
+  flex: 1;
+}
+.confidence {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+.feedback-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.quick-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}
+.correction-form {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.correction-form select {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--light);
+}

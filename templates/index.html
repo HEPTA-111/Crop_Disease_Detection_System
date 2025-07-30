@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Detective Florapatho</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 </head>
 <body>
   <header class="site-header">
@@ -20,6 +20,16 @@
   </header>
 
   <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-container">
+          {% for category, msg in messages %}
+            <div class="flash flash-{{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
     <!-- Hero -->
     <section class="hero">
       <p>Upload or capture a clear photo of your crop. Our AI will identify the plant and diagnose any disease in seconds.</p>
@@ -34,25 +44,19 @@
     <section class="card upload-card">
       <h2>Image Input</h2>
       <form id="upload-form" method="POST" enctype="multipart/form-data" action="/analyze">
-        <!-- Themed File Picker -->
         <input type="file" id="image-input" name="image" accept="image/*" required hidden>
         <label for="image-input" class="file-btn">📁 Choose Image</label>
-
         <button type="submit" class="btn" id="analyze-btn">
           <span class="btn-text">Analyze</span>
           <span class="loader" id="loader" hidden></span>
         </button>
       </form>
-
       <div class="or"><span>OR</span></div>
-
       <div id="camera-section" class="camera">
-        <video id="video" playsinline autoplay></video>
-        <button id="snap-btn" class="btn small">Capture</button>
+        <button id="snap-btn" class="btn small">Activate Camera</button>
+        <video id="video" hidden playsinline autoplay></video>
         <canvas id="canvas" hidden></canvas>
       </div>
-
-      <div id="message" class="message"></div>
     </section>
 
     <!-- Quick Links -->
